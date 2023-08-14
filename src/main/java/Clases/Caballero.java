@@ -27,17 +27,19 @@ public class Caballero extends Personaje {
     public Object[] Habilidad1(){
         double multiplicador;
         int penetracion;
-        multiplicador = 1.60;
-        penetracion = 60;
-        return new Object[] { multiplicador, penetracion };
+        String Nom = "Maza giratoria";
+        multiplicador = 2;
+        penetracion = 30;
+        return new Object[] { multiplicador, penetracion, Nom};
     }
     
     public Object[] Habilidad2(){
         double multiplicador;
         int penetracion;
-        multiplicador = 2;
-        penetracion = 80;
-        return new Object[] { multiplicador, penetracion };
+        String Nom = "Alabarda cargado";
+        multiplicador = 1.4;
+        penetracion = 70;
+        return new Object[] { multiplicador, penetracion, Nom };
     }
     public int Habilidad3(){
         return 20;

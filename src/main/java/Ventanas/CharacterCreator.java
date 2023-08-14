@@ -12,13 +12,15 @@ import java.lang.reflect.Method;
  * @author Familiar
  */
 public class CharacterCreator extends javax.swing.JPanel {
-    String nom;
-    int damage;
-    int defense;
-    int vida;
-    int Hab1;
-    int Hab2;
-    String tipo;
+    String Per1_Nom;
+    String Per2_Nom;
+    String Per3_Nom;
+    String Per4_Nom;
+    String Class1;
+    String Class2;
+    String Class3;
+    String Class4;
+    
     /**
      * Creates new form CharacterCreator
      */
@@ -37,42 +39,41 @@ public class CharacterCreator extends javax.swing.JPanel {
 
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        Class1_P1 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        Per_Nom2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        Per_Nom1 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        Class2_P1 = new javax.swing.JComboBox<>();
         jLabel17 = new javax.swing.JLabel();
-        Per_Nom3 = new javax.swing.JTextField();
+        Per_Nom2 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        Class1_P2 = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
-        Per_Nom4 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        Per_Nom3 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
+        Class2_P2 = new javax.swing.JComboBox<>();
         jLabel22 = new javax.swing.JLabel();
-        Per_Nom5 = new javax.swing.JTextField();
+        Per_Nom4 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         jPanel6.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Jugador 1");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caballero", "Guerrero Azteca", "Hada", "Mago", "Nigromante", "Reptiliano", "Troll", "Caballero oscuro", "Samurai" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        Class1_P1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caballero", "Guerrero Azteca", "Hada", "Mago", "Nigromante", "Reptiliano", "Troll", "Caballero oscuro", "Samurai" }));
+        Class1_P1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                Class1_P1ActionPerformed(evt);
             }
         });
 
@@ -95,35 +96,28 @@ public class CharacterCreator extends javax.swing.JPanel {
         jLabel12.setForeground(new java.awt.Color(30, 30, 30));
         jLabel12.setText("Nombre:");
 
-        Per_Nom2.addActionListener(new java.awt.event.ActionListener() {
+        Per_Nom1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Per_Nom2ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Aceptar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Per_Nom1ActionPerformed(evt);
             }
         });
 
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Clase:");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caballero", "Guerrero Azteca", "Hada", "Mago", "Nigromante", "Reptiliano", "Troll", "Caballero oscuro", "Samurai" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+        Class2_P1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caballero", "Guerrero Azteca", "Hada", "Mago", "Nigromante", "Reptiliano", "Troll", "Caballero oscuro", "Samurai" }));
+        Class2_P1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+                Class2_P1ActionPerformed(evt);
             }
         });
 
         jLabel17.setForeground(new java.awt.Color(30, 30, 30));
         jLabel17.setText("Nombre:");
 
-        Per_Nom3.addActionListener(new java.awt.event.ActionListener() {
+        Per_Nom2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Per_Nom3ActionPerformed(evt);
+                Per_Nom2ActionPerformed(evt);
             }
         });
 
@@ -145,15 +139,14 @@ public class CharacterCreator extends javax.swing.JPanel {
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(2, 2, 2)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Class1_P1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Per_Nom2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Per_Nom1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel18))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(jLabel15))
@@ -161,11 +154,11 @@ public class CharacterCreator extends javax.swing.JPanel {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addGap(2, 2, 2)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Class2_P1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Per_Nom3, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Per_Nom2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -182,25 +175,23 @@ public class CharacterCreator extends javax.swing.JPanel {
                         .addComponent(jLabel18)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Class1_P1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel12)
-                            .addComponent(Per_Nom2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Per_Nom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jLabel19)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Class2_P1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
-                    .addComponent(Per_Nom3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap())
+                    .addComponent(Per_Nom2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51))
         );
 
         jPanel7.setBackground(new java.awt.Color(204, 204, 255));
@@ -208,10 +199,10 @@ public class CharacterCreator extends javax.swing.JPanel {
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Jugador 2");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caballero", "Guerrero Azteca", "Hada", "Mago", "Nigromante", "Reptiliano", "Troll", "Caballero oscuro", "Samurai" }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        Class1_P2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caballero", "Guerrero Azteca", "Hada", "Mago", "Nigromante", "Reptiliano", "Troll", "Caballero oscuro", "Samurai" }));
+        Class1_P2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                Class1_P2ActionPerformed(evt);
             }
         });
 
@@ -234,35 +225,28 @@ public class CharacterCreator extends javax.swing.JPanel {
         jLabel21.setForeground(new java.awt.Color(30, 30, 30));
         jLabel21.setText("Nombre:");
 
-        Per_Nom4.addActionListener(new java.awt.event.ActionListener() {
+        Per_Nom3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Per_Nom4ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Aceptar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                Per_Nom3ActionPerformed(evt);
             }
         });
 
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Clase:");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caballero", "Guerrero Azteca", "Hada", "Mago", "Nigromante", "Reptiliano", "Troll", "Caballero oscuro", "Samurai" }));
-        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+        Class2_P2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caballero", "Guerrero Azteca", "Hada", "Mago", "Nigromante", "Reptiliano", "Troll", "Caballero oscuro", "Samurai" }));
+        Class2_P2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox6ActionPerformed(evt);
+                Class2_P2ActionPerformed(evt);
             }
         });
 
         jLabel22.setForeground(new java.awt.Color(30, 30, 30));
         jLabel22.setText("Nombre:");
 
-        Per_Nom5.addActionListener(new java.awt.event.ActionListener() {
+        Per_Nom4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Per_Nom5ActionPerformed(evt);
+                Per_Nom4ActionPerformed(evt);
             }
         });
 
@@ -272,40 +256,50 @@ public class CharacterCreator extends javax.swing.JPanel {
         jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setText("Personaje 2");
 
+        jButton2.setText("Aceptar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(2, 2, 2)
-                                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel7Layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(2, 2, 2)
+                                        .addComponent(Class1_P2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel7Layout.createSequentialGroup()
+                                        .addComponent(jLabel21)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Per_Nom3, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel23))
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel21)
+                                .addGap(51, 51, 51)
+                                .addComponent(jLabel20))
+                            .addComponent(jLabel24)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(2, 2, 2)
+                                .addComponent(Class2_P2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel22)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Per_Nom4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel23))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Per_Nom4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(jLabel20))
-                    .addComponent(jLabel24)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(2, 2, 2)
-                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel7Layout.createSequentialGroup()
-                            .addComponent(jLabel22)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Per_Nom5, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(76, 76, 76)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -322,24 +316,24 @@ public class CharacterCreator extends javax.swing.JPanel {
                         .addComponent(jLabel23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Class1_P2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel21)
-                            .addComponent(Per_Nom4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Per_Nom3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jLabel24)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Class2_P2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
-                    .addComponent(Per_Nom5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Per_Nom4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(jButton2)
                 .addContainerGap())
         );
 
@@ -365,58 +359,222 @@ public class CharacterCreator extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void Class1_P1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Class1_P1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_Class1_P1ActionPerformed
+
+    private void Per_Nom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Per_Nom1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Per_Nom1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Per1_Nom = Per_Nom1.getText();
+        Per2_Nom = Per_Nom2.getText();
+        Per3_Nom = Per_Nom3.getText();
+        Per4_Nom = Per_Nom4.getText();
+        Class1 = Class1_P1.getSelectedItem().toString();
+        Class2 = Class2_P1.getSelectedItem().toString();
+        Class3 = Class1_P2.getSelectedItem().toString();
+        Class4 = Class2_P2.getSelectedItem().toString();
+        //Creador de caballeros
+        if (Class1 == "Caballero");{
+            Clases.Caballero Kingth1 = new Clases.Caballero(15, Per1_Nom, 80, 100, "1");
+            Menu.Knight.add(Kingth1);
+        }
+        if (Class2 == "Caballero");{
+            Clases.Caballero Kingth2 = new Clases.Caballero(15, Per2_Nom, 80, 100, "2");
+            Menu.Knight.add(Kingth2);
+        }
+        if (Class3 == "Caballero");{
+            Clases.Caballero Kingth3 = new Clases.Caballero(15, Per3_Nom, 80, 100, "3");
+            Menu.Knight.add(Kingth3);
+        }
+        if (Class4 == "Caballero");{
+            Clases.Caballero Kingth4 = new Clases.Caballero(15, Per4_Nom, 80, 100, "4");
+            Menu.Knight.add(Kingth4);
+        }
+        //Creador Aztecas
+        if (Class1 == "Guerrero Azteca");{
+            Clases.Guerrero_Azteca Aztec1 = new Clases.Guerrero_Azteca(20,Per1_Nom, 40, 100, "1");
+            Menu.Aztec.add(Aztec1);
+        }
+        if (Class2 == "Guerrero Azteca");{
+            Clases.Guerrero_Azteca Aztec2 = new Clases.Guerrero_Azteca(20, Per2_Nom, 40, 100, "2");
+            Menu.Aztec.add(Aztec2);
+        }
+        if (Class3 == "Guerrero Azteca");{
+            Clases.Guerrero_Azteca Aztec3 = new Clases.Guerrero_Azteca(20, Per3_Nom, 40, 100, "3");
+            Menu.Aztec.add(Aztec3);
+        }
+        if (Class4 == "Guerrero Azteca");{
+            Clases.Guerrero_Azteca Aztec4 = new Clases.Guerrero_Azteca(20, Per4_Nom, 40, 100, "4");
+            Menu.Aztec.add(Aztec4);
+        }
+        
+        //Creador Hada
+        if (Class1 == "Hada");{
+            Clases.Hada Fairy1 = new Clases.Hada(25,Per1_Nom, 20, 150, "1");
+            Menu.Fairy.add(Fairy1);
+        }
+        if (Class2 == "Hada");{
+            Clases.Hada Fairy2 = new Clases.Hada(25, Per2_Nom, 20, 150, "2");
+            Menu.Fairy.add(Fairy2);
+        }
+        if (Class3 == "Hada");{
+            Clases.Hada Fairy3 = new Clases.Hada(25, Per3_Nom, 20, 150, "3");
+            Menu.Fairy.add(Fairy3);
+        }
+        if (Class4 == "Hada");{
+            Clases.Hada Fairy4 = new Clases.Hada(25, Per4_Nom, 20, 150, "4");
+            Menu.Fairy.add(Fairy4);
+        }
+        
+        //Creador Magos
+        if (Class1 == "Mago");{
+            Clases.Mago Wizard1 = new Clases.Mago(20,Per1_Nom, 60, 110, "1");
+            Menu.Wizard.add(Wizard1);
+        }
+        if (Class2 == "Mago");{
+            Clases.Mago Wizard2 = new Clases.Mago(20, Per2_Nom, 60, 110, "2");
+            Menu.Wizard.add(Wizard2);
+        }
+        if (Class3 == "Mago");{
+            Clases.Mago Wizard3 = new Clases.Mago(20, Per3_Nom, 60, 110, "3");
+            Menu.Wizard.add(Wizard3);
+        }
+        if (Class4 == "Mago");{
+            Clases.Mago Wizard4 = new Clases.Mago(20, Per4_Nom, 60, 110, "4");
+            Menu.Wizard.add(Wizard4);
+        }
+        
+        //Creador Nigros
+        if (Class1 == "Nigromante");{
+            Clases.Nigromante Nigro1 = new Clases.Nigromante(21,Per1_Nom, 60, 110, "1");
+            Menu.Nigro.add(Nigro1);
+        }
+        if (Class2 == "Nigromante");{
+            Clases.Nigromante Nigro2 = new Clases.Nigromante(21, Per2_Nom, 60, 110, "2");
+            Menu.Nigro.add(Nigro2);
+        }
+        if (Class3 == "Nigromante");{
+            Clases.Nigromante Nigro3 = new Clases.Nigromante(21, Per3_Nom, 60, 110, "3");
+            Menu.Nigro.add(Nigro3);
+        }
+        if (Class4 == "Nigromante");{
+            Clases.Nigromante Nigro4 = new Clases.Nigromante(21, Per4_Nom, 60, 110, "4");
+            Menu.Nigro.add(Nigro4);
+        }
+        
+        //Creador Reptis
+        if (Class1 == "Reptiliano");{
+            Clases.Reptiliano Repti1 = new Clases.Reptiliano(16,Per1_Nom, 70, 100, "1");
+            Menu.Reptil.add(Repti1);
+        }
+        if (Class2 == "Reptiliano");{
+            Clases.Reptiliano Repti2 = new Clases.Reptiliano(16, Per2_Nom, 70, 100, "2");
+            Menu.Reptil.add(Repti2);
+        }
+        if (Class3 == "Reptiliano");{
+            Clases.Reptiliano Repti3 = new Clases.Reptiliano(16, Per3_Nom, 70, 100, "3");
+            Menu.Reptil.add(Repti3);
+        }
+        if (Class4 == "Reptiliano");{
+            Clases.Reptiliano Repti4 = new Clases.Reptiliano(16, Per4_Nom, 70, 100, "4");
+            Menu.Reptil.add(Repti4);
+        }
+        
+        //Creador Trolls
+        if (Class1 == "Troll");{
+            Clases.Troll troll1 = new Clases.Troll(10,Per1_Nom, 50, 200, "1");
+            Menu.Troll.add(troll1);
+        }
+        if (Class2 == "Troll");{
+            Clases.Troll troll2 = new Clases.Troll(10, Per2_Nom, 50, 200, "2");
+            Menu.Troll.add(troll2);
+        }
+        if (Class3 == "Troll");{
+            Clases.Troll troll3 = new Clases.Troll(10, Per3_Nom, 50, 200, "3");
+            Menu.Troll.add(troll3);
+        }
+        if (Class4 == "Troll");{
+            Clases.Troll troll4 = new Clases.Troll(10, Per4_Nom, 50, 200, "4");
+            Menu.Troll.add(troll4);
+        }
+        
+        //Creador Blacks
+        if (Class1 == "Caballero oscuro");{
+            Clases.caballero_oscuro black1 = new Clases.caballero_oscuro(20,Per1_Nom, 80, 70, "1");
+            Menu.BlackK.add(black1);
+        }
+        if (Class2 == "Caballero oscuro");{
+            Clases.caballero_oscuro black2 = new Clases.caballero_oscuro(20, Per2_Nom, 80, 70, "2");
+            Menu.BlackK.add(black2);
+        }
+        if (Class3 == "Caballero oscuro");{
+            Clases.caballero_oscuro black3 = new Clases.caballero_oscuro(20, Per3_Nom, 80, 70, "3");
+            Menu.BlackK.add(black3);
+        }
+        if (Class4 == "Caballero oscuro");{
+            Clases.caballero_oscuro black4 = new Clases.caballero_oscuro(20, Per4_Nom, 80, 70, "4");
+            Menu.BlackK.add(black4);
+        }
+        
+        //Creador samurais
+        if (Class1 == "Samurai");{
+            Clases.samurai sam1 = new Clases.samurai(20,Per1_Nom, 60, 100, "1");
+            Menu.Sam.add(sam1);
+        }
+        if (Class2 == "Samurai");{
+            Clases.samurai sam2 = new Clases.samurai(20, Per2_Nom, 60, 100, "2");
+            Menu.Sam.add(sam2);
+        }
+        if (Class3 == "Samurai");{
+            Clases.samurai sam3 = new Clases.samurai(20, Per3_Nom, 60, 100, "3");
+            Menu.Sam.add(sam3);
+        }
+        if (Class4 == "Samurai");{
+            Clases.samurai sam4 = new Clases.samurai(20, Per4_Nom, 60, 100, "4");
+            Menu.Sam.add(sam4);
+        }
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void Class2_P1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Class2_P1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Class2_P1ActionPerformed
 
     private void Per_Nom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Per_Nom2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Per_Nom2ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void Class1_P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Class1_P2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    }//GEN-LAST:event_Class1_P2ActionPerformed
 
     private void Per_Nom3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Per_Nom3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Per_Nom3ActionPerformed
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+    private void Class2_P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Class2_P2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    }//GEN-LAST:event_Class2_P2ActionPerformed
 
     private void Per_Nom4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Per_Nom4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Per_Nom4ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox6ActionPerformed
-
-    private void Per_Nom5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Per_Nom5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Per_Nom5ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> Class1_P1;
+    private javax.swing.JComboBox<String> Class1_P2;
+    private javax.swing.JComboBox<String> Class2_P1;
+    private javax.swing.JComboBox<String> Class2_P2;
+    private javax.swing.JTextField Per_Nom1;
     private javax.swing.JTextField Per_Nom2;
     private javax.swing.JTextField Per_Nom3;
     private javax.swing.JTextField Per_Nom4;
-    private javax.swing.JTextField Per_Nom5;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;

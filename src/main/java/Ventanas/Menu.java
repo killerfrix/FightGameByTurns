@@ -94,7 +94,18 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    public static ArrayList<Clases.Caballero> Personaje = new ArrayList<>();
+    public static ArrayList<Clases.Caballero> Knight = new ArrayList<>();
+    public static ArrayList<Clases.Guerrero_Azteca> Aztec = new ArrayList<>();
+    public static ArrayList<Clases.Hada> Fairy = new ArrayList<>();
+    public static ArrayList<Clases.Mago> Wizard = new ArrayList<>();
+    public static ArrayList<Clases.Nigromante> Nigro = new ArrayList<>();
+    public static ArrayList<Clases.Reptiliano> Reptil = new ArrayList<>();
+    public static ArrayList<Clases.Troll> Troll = new ArrayList<>();
+    public static ArrayList<Clases.caballero_oscuro> BlackK = new ArrayList<>();
+    public static ArrayList<Clases.samurai> Sam = new ArrayList<>();
+    
+    
+    
     public static ArrayList<Integer> Habilidades = new ArrayList<>();
     
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -108,6 +119,12 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.add(page2, BorderLayout.CENTER);
         jPanel1.revalidate();
         jPanel1.repaint();
+        
+        int T = Troll.size();
+        for (int i = 0; i < T; i++) {
+            System.out.println(Troll.get(i).getNombre()+ " " + Troll.get(i).getDaño()+ " " + Troll.get(i).getVida()+ " " + Troll.get(i).getDefensa());
+        }
+        System.out.println("--------");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

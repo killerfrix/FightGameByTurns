@@ -107,7 +107,8 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    public static ArrayList<Character> Personaje = new ArrayList<>();
+    public static ArrayList<Clases.Caballero> Personaje = new ArrayList<>();
+    public static ArrayList<Integer> Habilidades = new ArrayList<>();
     
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:

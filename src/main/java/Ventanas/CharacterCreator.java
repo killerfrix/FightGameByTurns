@@ -381,6 +381,7 @@ public class CharacterCreator extends javax.swing.JPanel {
         if (Class1 == "Caballero");{
             Clases.Caballero Kingth1 = new Clases.Caballero(15, Per1_Nom, 80, 100, 1);
             Menu.Knight.add(Kingth1);
+            
         }
         if (Class2 == "Caballero");{
             Clases.Caballero Kingth2 = new Clases.Caballero(15, Per2_Nom, 80, 100, 2);

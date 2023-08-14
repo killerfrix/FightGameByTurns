@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Familiar
  */
 public class Menu extends javax.swing.JFrame {
-
+    public String P1;
     /**
      * Creates new form FightConsole
      */
@@ -105,9 +105,6 @@ public class Menu extends javax.swing.JFrame {
     public static ArrayList<Clases.samurai> Sam = new ArrayList<>();
     
     
-    
-    public static ArrayList<Integer> Habilidades = new ArrayList<>();
-    
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         PVPFrame page2 = new PVPFrame();
@@ -120,11 +117,6 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.revalidate();
         jPanel1.repaint();
         
-        int T = Troll.size();
-        for (int i = 0; i < T; i++) {
-            System.out.println(Troll.get(i).getNombre()+ " " + Troll.get(i).getDaño()+ " " + Troll.get(i).getVida()+ " " + Troll.get(i).getDefensa());
-        }
-        System.out.println("--------");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

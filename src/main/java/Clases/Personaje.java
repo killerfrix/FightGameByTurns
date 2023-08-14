@@ -13,11 +13,11 @@ public abstract class Personaje {
     private String Nombre;
     private int Defensa;
     private int Vida;
-    private String tipo;
+    private int tipo;
     
     
     
-    public Personaje (int Dam, String Nom, int Def, int vid, String tip){
+    public Personaje (int Dam, String Nom, int Def, int vid, int tip){
         this.Daño = Dam;
         this.Nombre = Nom;
         this.Defensa = Def;
@@ -60,11 +60,11 @@ public abstract class Personaje {
         this.Vida = Vida;
     }
     
-    public String getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
-    public void setTipo(String type) {
+    public void setTipo(int type) {
         this.tipo = type;
     }
     

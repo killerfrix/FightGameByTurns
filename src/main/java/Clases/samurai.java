@@ -11,7 +11,7 @@ package Clases;
 public class samurai  extends Personaje {
     String Hab1;
     
-    public samurai (int Daño, String Nombre, int Defensa, int Vida, String tipo){
+    public samurai (int Daño, String Nombre, int Defensa, int Vida, int tipo){
         super (Daño, Nombre, Defensa, Vida, tipo);
     }
    

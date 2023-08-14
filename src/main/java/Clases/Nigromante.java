@@ -11,7 +11,7 @@ package Clases;
 public class Nigromante extends Personaje {
     String Hab1;
     
-    public Nigromante (int Daño, String Nombre, int Defensa, int Vida, String tipo){
+    public Nigromante (int Daño, String Nombre, int Defensa, int Vida, int tipo){
         super (Daño, Nombre, Defensa, Vida, tipo);
     }
    

@@ -11,7 +11,7 @@ package Clases;
 public class Reptiliano  extends Personaje {
     String Hab1;
     
-    public Reptiliano (int Daño, String Nombre, int Defensa, int Vida, String tipo){
+    public Reptiliano (int Daño, String Nombre, int Defensa, int Vida, int tipo){
         super (Daño, Nombre, Defensa, Vida, tipo);
     }
    

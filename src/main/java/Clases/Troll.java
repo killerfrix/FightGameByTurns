@@ -11,7 +11,7 @@ package Clases;
 public class Troll  extends Personaje {
     String Hab1;
     
-    public Troll (int Daño, String Nombre, int Defensa, int Vida, String tipo){
+    public Troll (int Daño, String Nombre, int Defensa, int Vida, int tipo){
         super (Daño, Nombre, Defensa, Vida, tipo);
     }
    

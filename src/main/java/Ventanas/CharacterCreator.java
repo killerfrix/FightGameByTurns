@@ -379,162 +379,162 @@ public class CharacterCreator extends javax.swing.JPanel {
         Class4 = Class2_P2.getSelectedItem().toString();
         //Creador de caballeros
         if (Class1 == "Caballero");{
-            Clases.Caballero Kingth1 = new Clases.Caballero(15, Per1_Nom, 80, 100, "1");
+            Clases.Caballero Kingth1 = new Clases.Caballero(15, Per1_Nom, 80, 100, 1);
             Menu.Knight.add(Kingth1);
         }
         if (Class2 == "Caballero");{
-            Clases.Caballero Kingth2 = new Clases.Caballero(15, Per2_Nom, 80, 100, "2");
+            Clases.Caballero Kingth2 = new Clases.Caballero(15, Per2_Nom, 80, 100, 2);
             Menu.Knight.add(Kingth2);
         }
         if (Class3 == "Caballero");{
-            Clases.Caballero Kingth3 = new Clases.Caballero(15, Per3_Nom, 80, 100, "3");
+            Clases.Caballero Kingth3 = new Clases.Caballero(15, Per3_Nom, 80, 100, 3);
             Menu.Knight.add(Kingth3);
         }
         if (Class4 == "Caballero");{
-            Clases.Caballero Kingth4 = new Clases.Caballero(15, Per4_Nom, 80, 100, "4");
+            Clases.Caballero Kingth4 = new Clases.Caballero(15, Per4_Nom, 80, 100, 4);
             Menu.Knight.add(Kingth4);
         }
         //Creador Aztecas
         if (Class1 == "Guerrero Azteca");{
-            Clases.Guerrero_Azteca Aztec1 = new Clases.Guerrero_Azteca(20,Per1_Nom, 40, 100, "1");
+            Clases.Guerrero_Azteca Aztec1 = new Clases.Guerrero_Azteca(20,Per1_Nom, 40, 100, 1);
             Menu.Aztec.add(Aztec1);
         }
         if (Class2 == "Guerrero Azteca");{
-            Clases.Guerrero_Azteca Aztec2 = new Clases.Guerrero_Azteca(20, Per2_Nom, 40, 100, "2");
+            Clases.Guerrero_Azteca Aztec2 = new Clases.Guerrero_Azteca(20, Per2_Nom, 40, 100, 2);
             Menu.Aztec.add(Aztec2);
         }
         if (Class3 == "Guerrero Azteca");{
-            Clases.Guerrero_Azteca Aztec3 = new Clases.Guerrero_Azteca(20, Per3_Nom, 40, 100, "3");
+            Clases.Guerrero_Azteca Aztec3 = new Clases.Guerrero_Azteca(20, Per3_Nom, 40, 100, 3);
             Menu.Aztec.add(Aztec3);
         }
         if (Class4 == "Guerrero Azteca");{
-            Clases.Guerrero_Azteca Aztec4 = new Clases.Guerrero_Azteca(20, Per4_Nom, 40, 100, "4");
+            Clases.Guerrero_Azteca Aztec4 = new Clases.Guerrero_Azteca(20, Per4_Nom, 40, 100, 4);
             Menu.Aztec.add(Aztec4);
         }
         
         //Creador Hada
         if (Class1 == "Hada");{
-            Clases.Hada Fairy1 = new Clases.Hada(25,Per1_Nom, 20, 150, "1");
+            Clases.Hada Fairy1 = new Clases.Hada(25,Per1_Nom, 20, 150, 1);
             Menu.Fairy.add(Fairy1);
         }
         if (Class2 == "Hada");{
-            Clases.Hada Fairy2 = new Clases.Hada(25, Per2_Nom, 20, 150, "2");
+            Clases.Hada Fairy2 = new Clases.Hada(25, Per2_Nom, 20, 150, 2);
             Menu.Fairy.add(Fairy2);
         }
         if (Class3 == "Hada");{
-            Clases.Hada Fairy3 = new Clases.Hada(25, Per3_Nom, 20, 150, "3");
+            Clases.Hada Fairy3 = new Clases.Hada(25, Per3_Nom, 20, 150, 3);
             Menu.Fairy.add(Fairy3);
         }
         if (Class4 == "Hada");{
-            Clases.Hada Fairy4 = new Clases.Hada(25, Per4_Nom, 20, 150, "4");
+            Clases.Hada Fairy4 = new Clases.Hada(25, Per4_Nom, 20, 150, 4);
             Menu.Fairy.add(Fairy4);
         }
         
         //Creador Magos
         if (Class1 == "Mago");{
-            Clases.Mago Wizard1 = new Clases.Mago(20,Per1_Nom, 60, 110, "1");
+            Clases.Mago Wizard1 = new Clases.Mago(20,Per1_Nom, 60, 110, 1);
             Menu.Wizard.add(Wizard1);
         }
         if (Class2 == "Mago");{
-            Clases.Mago Wizard2 = new Clases.Mago(20, Per2_Nom, 60, 110, "2");
+            Clases.Mago Wizard2 = new Clases.Mago(20, Per2_Nom, 60, 110, 2);
             Menu.Wizard.add(Wizard2);
         }
         if (Class3 == "Mago");{
-            Clases.Mago Wizard3 = new Clases.Mago(20, Per3_Nom, 60, 110, "3");
+            Clases.Mago Wizard3 = new Clases.Mago(20, Per3_Nom, 60, 110, 3);
             Menu.Wizard.add(Wizard3);
         }
         if (Class4 == "Mago");{
-            Clases.Mago Wizard4 = new Clases.Mago(20, Per4_Nom, 60, 110, "4");
+            Clases.Mago Wizard4 = new Clases.Mago(20, Per4_Nom, 60, 110, 4);
             Menu.Wizard.add(Wizard4);
         }
         
         //Creador Nigros
         if (Class1 == "Nigromante");{
-            Clases.Nigromante Nigro1 = new Clases.Nigromante(21,Per1_Nom, 60, 110, "1");
+            Clases.Nigromante Nigro1 = new Clases.Nigromante(21,Per1_Nom, 60, 110, 1);
             Menu.Nigro.add(Nigro1);
         }
         if (Class2 == "Nigromante");{
-            Clases.Nigromante Nigro2 = new Clases.Nigromante(21, Per2_Nom, 60, 110, "2");
+            Clases.Nigromante Nigro2 = new Clases.Nigromante(21, Per2_Nom, 60, 110, 2);
             Menu.Nigro.add(Nigro2);
         }
         if (Class3 == "Nigromante");{
-            Clases.Nigromante Nigro3 = new Clases.Nigromante(21, Per3_Nom, 60, 110, "3");
+            Clases.Nigromante Nigro3 = new Clases.Nigromante(21, Per3_Nom, 60, 110, 3);
             Menu.Nigro.add(Nigro3);
         }
         if (Class4 == "Nigromante");{
-            Clases.Nigromante Nigro4 = new Clases.Nigromante(21, Per4_Nom, 60, 110, "4");
+            Clases.Nigromante Nigro4 = new Clases.Nigromante(21, Per4_Nom, 60, 110, 4);
             Menu.Nigro.add(Nigro4);
         }
         
         //Creador Reptis
         if (Class1 == "Reptiliano");{
-            Clases.Reptiliano Repti1 = new Clases.Reptiliano(16,Per1_Nom, 70, 100, "1");
+            Clases.Reptiliano Repti1 = new Clases.Reptiliano(16,Per1_Nom, 70, 100, 1);
             Menu.Reptil.add(Repti1);
         }
         if (Class2 == "Reptiliano");{
-            Clases.Reptiliano Repti2 = new Clases.Reptiliano(16, Per2_Nom, 70, 100, "2");
+            Clases.Reptiliano Repti2 = new Clases.Reptiliano(16, Per2_Nom, 70, 100, 2);
             Menu.Reptil.add(Repti2);
         }
         if (Class3 == "Reptiliano");{
-            Clases.Reptiliano Repti3 = new Clases.Reptiliano(16, Per3_Nom, 70, 100, "3");
+            Clases.Reptiliano Repti3 = new Clases.Reptiliano(16, Per3_Nom, 70, 100, 3);
             Menu.Reptil.add(Repti3);
         }
         if (Class4 == "Reptiliano");{
-            Clases.Reptiliano Repti4 = new Clases.Reptiliano(16, Per4_Nom, 70, 100, "4");
+            Clases.Reptiliano Repti4 = new Clases.Reptiliano(16, Per4_Nom, 70, 100, 4);
             Menu.Reptil.add(Repti4);
         }
         
         //Creador Trolls
         if (Class1 == "Troll");{
-            Clases.Troll troll1 = new Clases.Troll(10,Per1_Nom, 50, 200, "1");
+            Clases.Troll troll1 = new Clases.Troll(10,Per1_Nom, 50, 200, 1);
             Menu.Troll.add(troll1);
         }
         if (Class2 == "Troll");{
-            Clases.Troll troll2 = new Clases.Troll(10, Per2_Nom, 50, 200, "2");
+            Clases.Troll troll2 = new Clases.Troll(10, Per2_Nom, 50, 200, 2);
             Menu.Troll.add(troll2);
         }
         if (Class3 == "Troll");{
-            Clases.Troll troll3 = new Clases.Troll(10, Per3_Nom, 50, 200, "3");
+            Clases.Troll troll3 = new Clases.Troll(10, Per3_Nom, 50, 200, 3);
             Menu.Troll.add(troll3);
         }
         if (Class4 == "Troll");{
-            Clases.Troll troll4 = new Clases.Troll(10, Per4_Nom, 50, 200, "4");
+            Clases.Troll troll4 = new Clases.Troll(10, Per4_Nom, 50, 200, 4);
             Menu.Troll.add(troll4);
         }
         
         //Creador Blacks
         if (Class1 == "Caballero oscuro");{
-            Clases.caballero_oscuro black1 = new Clases.caballero_oscuro(20,Per1_Nom, 80, 70, "1");
+            Clases.caballero_oscuro black1 = new Clases.caballero_oscuro(20,Per1_Nom, 80, 70, 1);
             Menu.BlackK.add(black1);
         }
         if (Class2 == "Caballero oscuro");{
-            Clases.caballero_oscuro black2 = new Clases.caballero_oscuro(20, Per2_Nom, 80, 70, "2");
+            Clases.caballero_oscuro black2 = new Clases.caballero_oscuro(20, Per2_Nom, 80, 70, 2);
             Menu.BlackK.add(black2);
         }
         if (Class3 == "Caballero oscuro");{
-            Clases.caballero_oscuro black3 = new Clases.caballero_oscuro(20, Per3_Nom, 80, 70, "3");
+            Clases.caballero_oscuro black3 = new Clases.caballero_oscuro(20, Per3_Nom, 80, 70, 3);
             Menu.BlackK.add(black3);
         }
         if (Class4 == "Caballero oscuro");{
-            Clases.caballero_oscuro black4 = new Clases.caballero_oscuro(20, Per4_Nom, 80, 70, "4");
+            Clases.caballero_oscuro black4 = new Clases.caballero_oscuro(20, Per4_Nom, 80, 70, 4);
             Menu.BlackK.add(black4);
         }
         
         //Creador samurais
         if (Class1 == "Samurai");{
-            Clases.samurai sam1 = new Clases.samurai(20,Per1_Nom, 60, 100, "1");
+            Clases.samurai sam1 = new Clases.samurai(20,Per1_Nom, 60, 100, 1);
             Menu.Sam.add(sam1);
         }
         if (Class2 == "Samurai");{
-            Clases.samurai sam2 = new Clases.samurai(20, Per2_Nom, 60, 100, "2");
+            Clases.samurai sam2 = new Clases.samurai(20, Per2_Nom, 60, 100, 2);
             Menu.Sam.add(sam2);
         }
         if (Class3 == "Samurai");{
-            Clases.samurai sam3 = new Clases.samurai(20, Per3_Nom, 60, 100, "3");
+            Clases.samurai sam3 = new Clases.samurai(20, Per3_Nom, 60, 100, 3);
             Menu.Sam.add(sam3);
         }
         if (Class4 == "Samurai");{
-            Clases.samurai sam4 = new Clases.samurai(20, Per4_Nom, 60, 100, "4");
+            Clases.samurai sam4 = new Clases.samurai(20, Per4_Nom, 60, 100, 4);
             Menu.Sam.add(sam4);
         }
         

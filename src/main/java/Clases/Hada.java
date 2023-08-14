@@ -11,7 +11,7 @@ package Clases;
 public class Hada extends Personaje{
     String Hab1;
     
-    public Hada (int Daño, String Nombre, int Defensa, int Vida, String tipo){
+    public Hada (int Daño, String Nombre, int Defensa, int Vida, int tipo){
         super (Daño, Nombre, Defensa, Vida, tipo);
     }
    

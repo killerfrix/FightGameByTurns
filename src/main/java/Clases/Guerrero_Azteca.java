@@ -11,7 +11,7 @@ package Clases;
 public class Guerrero_Azteca extends Personaje {
     String Hab1;
     
-    public Guerrero_Azteca (int Daño, String Nombre, int Defensa, int Vida, String tipo){
+    public Guerrero_Azteca (int Daño, String Nombre, int Defensa, int Vida, int tipo){
         super (Daño, Nombre, Defensa, Vida, tipo);
     }
    

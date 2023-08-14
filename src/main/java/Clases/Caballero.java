@@ -11,7 +11,7 @@ package Clases;
 public class Caballero extends Personaje {
     String Hab1;
     
-    public Caballero (int Daño, String Nombre, int Defensa, int Vida, String tipo){
+    public Caballero (int Daño, String Nombre, int Defensa, int Vida, int tipo){
         super (Daño, Nombre, Defensa, Vida, tipo);
     }
    

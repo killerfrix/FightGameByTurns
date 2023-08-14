@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package Ventanas;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import javax.swing.*;
+import java.awt.image.BufferedImage;
+
 /**
  *
  * @author Familiar
@@ -17,7 +21,20 @@ public class PVPFrame extends javax.swing.JPanel {
         initComponents();
     }
     
-    
+    public static ImageIcon invertImageHorizontally(ImageIcon originalIcon) {
+        Image originalImage = originalIcon.getImage();
+        int width = originalImage.getWidth(null);
+        int height = originalImage.getHeight(null);
+
+        BufferedImage invertedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2d = invertedImage.createGraphics();
+
+        // Dibujar la imagen original reflejada horizontalmente
+        g2d.drawImage(originalImage, width, 0, -width, height, null);
+        g2d.dispose();
+
+        return new ImageIcon(invertedImage);
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,10 +60,10 @@ public class PVPFrame extends javax.swing.JPanel {
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        char2 = new javax.swing.JLabel();
         char1 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        char4 = new javax.swing.JLabel();
+        char3 = new javax.swing.JLabel();
         iniciar = new javax.swing.JButton();
 
         setMaximumSize(null);
@@ -102,21 +119,21 @@ public class PVPFrame extends javax.swing.JPanel {
         });
         jPanel3.setLayout(null);
 
-        jLabel3.setText("jLabel3");
-        jPanel3.add(jLabel3);
-        jLabel3.setBounds(70, 0, 119, 195);
+        char2.setText("jLabel3");
+        jPanel3.add(char2);
+        char2.setBounds(70, 0, 119, 195);
 
         char1.setPreferredSize(new java.awt.Dimension(119, 195));
         jPanel3.add(char1);
         char1.setBounds(0, 0, 119, 195);
 
-        jLabel1.setText("jLabel1");
-        jPanel3.add(jLabel1);
-        jLabel1.setBounds(280, 0, 119, 195);
+        char4.setText("jLabel1");
+        jPanel3.add(char4);
+        char4.setBounds(280, 0, 119, 195);
 
-        jLabel2.setText("jLabel2");
-        jPanel3.add(jLabel2);
-        jLabel2.setBounds(220, 0, 119, 195);
+        char3.setText("jLabel2");
+        jPanel3.add(char3);
+        char3.setBounds(220, 0, 119, 195);
 
         iniciar.setText("Iniciar");
         iniciar.addActionListener(new java.awt.event.ActionListener() {
@@ -218,13 +235,21 @@ public class PVPFrame extends javax.swing.JPanel {
 
     private void iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarActionPerformed
         // TODO add your handling code here:
-        iniciar.setVisible(false);
+        
+        
+               
+        ImageIcon Icon2 = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Fairy.png");
+        ImageIcon invertedIcon = invertImageHorizontally(Icon2);
+        char2.setIcon(invertedIcon);
         
     }//GEN-LAST:event_iniciarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel char1;
+    private javax.swing.JLabel char2;
+    private javax.swing.JLabel char3;
+    private javax.swing.JLabel char4;
     private javax.swing.JButton iniciar;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -234,9 +259,6 @@ public class PVPFrame extends javax.swing.JPanel {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;

@@ -105,6 +105,8 @@ public class Menu extends javax.swing.JFrame {
     public static ArrayList<Clases.samurai> Sam = new ArrayList<>();
     
     
+    
+    
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         PVPFrame page2 = new PVPFrame();

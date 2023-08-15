@@ -17,6 +17,11 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        Clases.Caballero Caballero1 = new Clases.Caballero(15, "Caballero", 50, 110);
+        Menu.Knight.add(Caballero1);
+        
+        Clases.Mago Mago1 = new Clases.Mago(7, "Mago", 25, 100);
+        Menu.Wizard.add(Mago1);
     }
 
     /**
@@ -30,7 +35,6 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(null);
@@ -58,13 +62,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Seleccionar personajes");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -74,9 +71,8 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4)))
+                        .addComponent(jButton4)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -85,24 +81,17 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton1))
+                .addComponent(jButton4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    public static ArrayList<Clases.Caballero> Knight = new ArrayList<>();
-    public static ArrayList<Clases.Guerrero_Azteca> Aztec = new ArrayList<>();
-    public static ArrayList<Clases.Hada> Fairy = new ArrayList<>();
+    public static ArrayList<Clases.Caballero> Knight = new ArrayList<Clases.Caballero>();
+    
+
     public static ArrayList<Clases.Mago> Wizard = new ArrayList<>();
-    public static ArrayList<Clases.Nigromante> Nigro = new ArrayList<>();
-    public static ArrayList<Clases.Reptiliano> Reptil = new ArrayList<>();
-    public static ArrayList<Clases.Troll> Troll = new ArrayList<>();
-    public static ArrayList<Clases.caballero_oscuro> BlackK = new ArrayList<>();
-    public static ArrayList<Clases.samurai> Sam = new ArrayList<>();
     
     
     
@@ -120,19 +109,6 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.repaint();
         
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        CharacterCreator page3 = new CharacterCreator();
-
-        page3.setSize(644, 300);
-        page3.setLocation(0, 0);
-
-        jPanel1.removeAll();
-        jPanel1.add(page3, BorderLayout.CENTER);
-        jPanel1.revalidate();
-        jPanel1.repaint();
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,7 +147,6 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

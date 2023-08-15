@@ -4,44 +4,38 @@
  */
 package Clases;
 
+import Ventanas.PVPFrame;
+
 /**
  *
  * @author Familiar
  */
 public class Caballero extends Personaje {
-    String Hab1;
     
-    public Caballero (int Daño, String Nombre, int Defensa, int Vida, int tipo){
-        super (Daño, Nombre, Defensa, Vida, tipo);
+    public Caballero (int Daño, String Nombre, int Defensa, int Vida){
+        super (Daño, Nombre, Defensa, Vida);
     }
-   
     
+    @Override 
     public void Ataque(){
-        System.out.println("Habilidad");
+        int vidaMago = Ventanas.Menu.Wizard.get(0).getVida();
+        int dañoCaballero = Ventanas.Menu.Knight.get(0).getDaño();
+        int Resultado = vidaMago - dañoCaballero;
+        
+        Mago Wizard = Ventanas.Menu.Wizard.get(0);
+        Wizard.setVida(Resultado);
     }
+    
+    @Override
+    public void Habilidad1(){
+        double multiplicador;
 
-    public String getHab() {
-        return "Habilidad de la clase ejemplo";
-    }
-    
-    public Object[] Habilidad1(){
-        double multiplicador;
-        int penetracion;
-        String Nom = "Maza giratoria";
         multiplicador = 2;
-        penetracion = 30;
-        return new Object[] { multiplicador, penetracion, Nom};
     }
     
-    public Object[] Habilidad2(){
+    @Override
+    public void Habilidad2(){
         double multiplicador;
-        int penetracion;
-        String Nom = "Alabarda cargado";
         multiplicador = 1.4;
-        penetracion = 70;
-        return new Object[] { multiplicador, penetracion, Nom };
-    }
-    public int Habilidad3(){
-        return 20;
-    }
+    } 
 }

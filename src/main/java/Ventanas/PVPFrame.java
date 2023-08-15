@@ -63,7 +63,7 @@ public class PVPFrame extends javax.swing.JPanel {
         char1 = new javax.swing.JLabel();
         char4 = new javax.swing.JLabel();
         char3 = new javax.swing.JLabel();
-        P1 = new javax.swing.JLabel();
+        P2 = new javax.swing.JLabel();
 
         setMaximumSize(null);
 
@@ -129,7 +129,7 @@ public class PVPFrame extends javax.swing.JPanel {
         jPanel3.add(char3);
         char3.setBounds(220, 0, 119, 195);
 
-        P1.setText("100%");
+        P2.setText("100%");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -156,7 +156,7 @@ public class PVPFrame extends javax.swing.JPanel {
                             .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
-                        .addComponent(P1)))
+                        .addComponent(P2)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -169,7 +169,7 @@ public class PVPFrame extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(P1)
+                        .addComponent(P2)
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -204,11 +204,14 @@ public class PVPFrame extends javax.swing.JPanel {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         Menu.Knight.get(0).Ataque();
+        
+        int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
+        
         if (Menu.Wizard.get(0).getVida() > 0){
-            P1.setText(String.valueOf(Menu.Wizard.get(0).getVida())+"%");
+            P2.setText(String.valueOf(VidaPorcentual)+"%");
         }
         else if(Menu.Wizard.get(0).getVida() <= 0){
-            P1.setText("0%");
+            P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
         }
         
@@ -216,10 +219,32 @@ public class PVPFrame extends javax.swing.JPanel {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        Menu.Knight.get(0).Habilidad1();
+        
+        int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
+        
+        if (Menu.Wizard.get(0).getVida() > 0){
+            P2.setText(String.valueOf(VidaPorcentual)+"%");
+        }
+        else if(Menu.Wizard.get(0).getVida() <= 0){
+            P2.setText("0%");
+            panelLogs.setText("Caballero ha ganado");
+        }
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        Menu.Knight.get(0).Habilidad1();
+        
+        int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
+        
+        if (Menu.Wizard.get(0).getVida() > 0){
+            P2.setText(String.valueOf(VidaPorcentual)+"%");
+        }
+        else if(Menu.Wizard.get(0).getVida() <= 0){
+            P2.setText("0%");
+            panelLogs.setText("Caballero ha ganado");
+        }
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jPanel3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel3KeyPressed
@@ -228,7 +253,7 @@ public class PVPFrame extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel P1;
+    private javax.swing.JLabel P2;
     private javax.swing.JLabel char1;
     private javax.swing.JLabel char2;
     private javax.swing.JLabel char3;

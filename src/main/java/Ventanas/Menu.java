@@ -17,10 +17,10 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
-        Clases.Caballero Caballero1 = new Clases.Caballero(15, "Caballero", 50, 110);
+        Clases.Caballero Caballero1 = new Clases.Caballero(15, "Caballero", 50, 210);
         Menu.Knight.add(Caballero1);
         
-        Clases.Mago Mago1 = new Clases.Mago(7, "Mago", 25, 100);
+        Clases.Mago Mago1 = new Clases.Mago(7, "Mago", 25, 200);
         Menu.Wizard.add(Mago1);
     }
 

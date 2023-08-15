@@ -25,17 +25,27 @@ public class Caballero extends Personaje {
         Mago Wizard = Ventanas.Menu.Wizard.get(0);
         Wizard.setVida(Resultado);
     }
-    
+
     @Override
     public void Habilidad1(){
-        double multiplicador;
-
-        multiplicador = 2;
+        double multiplicador = 2;
+        double  vidaMago = Ventanas.Menu.Wizard.get(0).getVida();
+        double  dañoCaballero = Ventanas.Menu.Knight.get(0).getDaño();
+        double  Resultado = vidaMago - (dañoCaballero*multiplicador);
+        
+        Mago Wizard = Ventanas.Menu.Wizard.get(0);
+        Wizard.setVida((int) Resultado);
     }
     
     @Override
     public void Habilidad2(){
         double multiplicador;
         multiplicador = 1.4;
-    } 
+        double  vidaMago = Ventanas.Menu.Wizard.get(0).getVida();
+        double  dañoCaballero = Ventanas.Menu.Knight.get(0).getDaño();
+        double  Resultado = vidaMago - (dañoCaballero*multiplicador);
+        
+        Mago Wizard = Ventanas.Menu.Wizard.get(0);
+        Wizard.setVida((int) Resultado);
+    }
 }

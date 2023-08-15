@@ -63,10 +63,8 @@ public class PVPFrame extends javax.swing.JPanel{
         jButton10 = new javax.swing.JButton();
         EstadoDefensa1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        char2 = new javax.swing.JLabel();
         char1 = new javax.swing.JLabel();
         char4 = new javax.swing.JLabel();
-        char3 = new javax.swing.JLabel();
         P2 = new javax.swing.JLabel();
         P1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -135,16 +133,17 @@ public class PVPFrame extends javax.swing.JPanel{
             }
         });
         jPanel3.setLayout(null);
-        jPanel3.add(char2);
-        char2.setBounds(70, 0, 119, 195);
 
         char1.setPreferredSize(new java.awt.Dimension(119, 195));
         jPanel3.add(char1);
         char1.setBounds(0, 0, 119, 195);
+        ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
+        ImageIcon invertedIcon = invertImageHorizontally(image);
+        char1.setIcon(invertedIcon);
         jPanel3.add(char4);
         char4.setBounds(280, 0, 119, 195);
-        jPanel3.add(char3);
-        char3.setBounds(220, 0, 119, 195);
+        ImageIcon image2 = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Wizard.png");
+        char4.setIcon(image2);
 
         P2.setText("100%");
 
@@ -307,6 +306,10 @@ public class PVPFrame extends javax.swing.JPanel{
             panelLogs.setText("Caballero ha ganado");
         }
         
+        ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
+            ImageIcon invertedIcon = invertImageHorizontally(image);
+            char1.setIcon(invertedIcon);
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -324,6 +327,9 @@ public class PVPFrame extends javax.swing.JPanel{
             P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
         }
+        ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
+            ImageIcon invertedIcon = invertImageHorizontally(image);
+            char1.setIcon(invertedIcon);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -341,6 +347,10 @@ public class PVPFrame extends javax.swing.JPanel{
             P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
         }
+        
+        ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
+            ImageIcon invertedIcon = invertImageHorizontally(image);
+            char1.setIcon(invertedIcon);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jPanel3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel3KeyPressed
@@ -385,6 +395,9 @@ public class PVPFrame extends javax.swing.JPanel{
             Knight.setEstadoDefensa(false);
             EstadoDefensa1.setText("Desactivada");
         }
+        ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/KnightB.png");
+        ImageIcon invertedIcon = invertImageHorizontally(image);
+        char1.setIcon(invertedIcon);
         
     }//GEN-LAST:event_EstadoDefensa1ActionPerformed
 
@@ -395,8 +408,6 @@ public class PVPFrame extends javax.swing.JPanel{
     private javax.swing.JLabel P1;
     private javax.swing.JLabel P2;
     private javax.swing.JLabel char1;
-    private javax.swing.JLabel char2;
-    private javax.swing.JLabel char3;
     private javax.swing.JLabel char4;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;

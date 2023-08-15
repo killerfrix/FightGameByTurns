@@ -12,8 +12,8 @@ import Ventanas.PVPFrame;
  */
 public class Caballero extends Personaje {
     
-    public Caballero (int Daño, String Nombre, int Defensa, int Vida){
-        super (Daño, Nombre, Defensa, Vida);
+    public Caballero (int Daño, String Nombre, int Defensa, int Vida, boolean EstadoDefensa){
+        super (Daño, Nombre, Defensa, Vida, EstadoDefensa);
     }
     
     @Override 
@@ -28,7 +28,7 @@ public class Caballero extends Personaje {
 
     @Override
     public void Habilidad1(){
-        double multiplicador = 2;
+        double multiplicador = 1.4;
         double  vidaMago = Ventanas.Menu.Wizard.get(0).getVida();
         double  dañoCaballero = Ventanas.Menu.Knight.get(0).getDaño();
         double  Resultado = vidaMago - (dañoCaballero*multiplicador);
@@ -40,7 +40,7 @@ public class Caballero extends Personaje {
     @Override
     public void Habilidad2(){
         double multiplicador;
-        multiplicador = 1.4;
+        multiplicador = 2;
         double  vidaMago = Ventanas.Menu.Wizard.get(0).getVida();
         double  dañoCaballero = Ventanas.Menu.Knight.get(0).getDaño();
         double  Resultado = vidaMago - (dañoCaballero*multiplicador);

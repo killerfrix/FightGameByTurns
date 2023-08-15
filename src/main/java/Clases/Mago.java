@@ -4,6 +4,8 @@
  */
 package Clases;
 
+import Ventanas.Menu;
+
 /**
  *
  * @author Familiar
@@ -11,35 +13,90 @@ package Clases;
 public class Mago extends Personaje {
     String Hab1;
     
-    public Mago (int Daño, String Nombre, int Defensa, int Vida){
-        super (Daño, Nombre, Defensa, Vida);
+    public Mago (int Daño, String Nombre, int Defensa, int Vida, boolean EstadoDefensa){
+        super (Daño, Nombre, Defensa, Vida, EstadoDefensa);
     }
    
     
+    @Override
     public void Ataque(){
-        System.out.println("Habilidad");
+        Caballero Knight = Ventanas.Menu.Knight.get(0);
+        
+        if(Menu.Knight.get(0).getEstadoDefensa() == false){
+            int vidaCaballero = Ventanas.Menu.Knight.get(0).getVida();
+            int dañoMago = Ventanas.Menu.Wizard.get(0).getDaño();
+            int Resultado = vidaCaballero - dañoMago;
+        
+            Knight.setVida(Resultado);
+        }
+        else if(Menu.Knight.get(0).getEstadoDefensa() == true){      
+            if(Menu.Knight.get(0).getDefensa() > 0){
+                int EscudoCaballero = Ventanas.Menu.Knight.get(0).getDefensa();
+                int dañoMago = Ventanas.Menu.Wizard.get(0).getDaño();
+                int Resultado2 = EscudoCaballero - dañoMago;
+
+                Knight.setDefensa(Resultado2);
+            }
+            else if(Menu.Knight.get(0).getDefensa() <= 0){
+                Knight.setEstadoDefensa(false);
+            }   
+        }     
     }
 
-    public String getHab() {
-        return "Habilidad de la clase ejemplo";
-    }
-    
     @Override
     public void Habilidad1(){
-        double multiplicador;
+        double multiplicador = 1.4;
+        
+        Caballero Knight = Ventanas.Menu.Knight.get(0);
+        
+        if(Menu.Knight.get(0).getEstadoDefensa() == false){
+            double  vidaCaballero = Ventanas.Menu.Knight.get(0).getVida();
+            double  dañoMago = Ventanas.Menu.Wizard.get(0).getDaño();
+            double  Resultado = vidaCaballero - (dañoMago*multiplicador);
+        
+            Knight.setVida((int) Resultado);
+        }
+        
+        else if(Menu.Knight.get(0).getEstadoDefensa() == true){      
+            if(Menu.Knight.get(0).getDefensa() > 0){
+                double EscudoCaballero = Ventanas.Menu.Knight.get(0).getDefensa();
+                double dañoMago = Ventanas.Menu.Wizard.get(0).getDaño();
+                double Resultado2 = EscudoCaballero - (dañoMago*multiplicador);
 
-        multiplicador = 1.5;
+                Knight.setDefensa((int) Resultado2);
+            }
+            else if(Menu.Knight.get(0).getDefensa() <= 0){
+                Knight.setEstadoDefensa(false);
+            }   
+        }     
     }
     
     @Override
     public void Habilidad2(){
-        double multiplicador;
+        double multiplicador = 2;
         
-        multiplicador = 1.6;
+        Caballero Knight = Ventanas.Menu.Knight.get(0);
+        
+        if(Menu.Knight.get(0).getEstadoDefensa() == false){
+            double  vidaCaballero = Ventanas.Menu.Knight.get(0).getVida();
+            double  dañoMago = Ventanas.Menu.Wizard.get(0).getDaño();
+            double  Resultado = vidaCaballero - (dañoMago*multiplicador);
+        
+            Knight.setVida((int) Resultado);
+        }
+        
+        else if(Menu.Knight.get(0).getEstadoDefensa() == true){      
+            if(Menu.Knight.get(0).getDefensa() > 0){
+                double EscudoCaballero = Ventanas.Menu.Knight.get(0).getDefensa();
+                double dañoMago = Ventanas.Menu.Wizard.get(0).getDaño();
+                double Resultado2 = EscudoCaballero - (dañoMago*multiplicador);
 
-    }
-    public int Habilidad3(){
-        return 20;
+                Knight.setDefensa((int) Resultado2);
+            }
+            else if(Menu.Knight.get(0).getDefensa() <= 0){
+                Knight.setEstadoDefensa(false);
+            }   
+        }   
     }
     
 }

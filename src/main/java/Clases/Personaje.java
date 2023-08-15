@@ -13,14 +13,16 @@ public abstract class Personaje {
     private String Nombre;
     private int Defensa;
     private int Vida;
+    private boolean EstadoDefensa;
     
     
     
-    public Personaje (int Dam, String Nom, int Def, int vid){
+    public Personaje (int Dam, String Nom, int Def, int vid, boolean EstadoDefensa){
         this.Daño = Dam;
         this.Nombre = Nom;
         this.Defensa = Def;
         this.Vida = vid;
+        this.EstadoDefensa = EstadoDefensa;
     }
     
     
@@ -60,5 +62,14 @@ public abstract class Personaje {
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
+
+    public boolean getEstadoDefensa() {
+        return EstadoDefensa;
+    }
+
+    public void setEstadoDefensa(boolean EstadoDefensa) {
+        this.EstadoDefensa = EstadoDefensa;
+    }
+    
     
 }

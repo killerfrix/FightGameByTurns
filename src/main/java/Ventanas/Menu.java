@@ -17,11 +17,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
-        Clases.Caballero Caballero1 = new Clases.Caballero(15, "Caballero", 50, 210);
-        Menu.Knight.add(Caballero1);
         
-        Clases.Mago Mago1 = new Clases.Mago(7, "Mago", 25, 200);
-        Menu.Wizard.add(Mago1);
     }
 
     /**
@@ -98,6 +94,12 @@ public class Menu extends javax.swing.JFrame {
     
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        Clases.Caballero Caballero1 = new Clases.Caballero(15, "Caballero", 100, 210, false);
+        Menu.Knight.add(Caballero1);
+        
+        Clases.Mago Mago1 = new Clases.Mago(10, "Mago", 0, 200, false);
+        Menu.Wizard.add(Mago1);
+        
         PVPFrame page2 = new PVPFrame();
 
         page2.setSize(644, 300);

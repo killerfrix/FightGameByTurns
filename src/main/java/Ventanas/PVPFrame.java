@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package Ventanas;
+import Clases.Caballero;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import javax.swing.*;
@@ -57,13 +58,18 @@ public class PVPFrame extends javax.swing.JPanel {
         jButton7 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        EstadoDefensa1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         char2 = new javax.swing.JLabel();
         char1 = new javax.swing.JLabel();
         char4 = new javax.swing.JLabel();
         char3 = new javax.swing.JLabel();
         P2 = new javax.swing.JLabel();
+        P1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        DefP1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setMaximumSize(null);
 
@@ -80,6 +86,11 @@ public class PVPFrame extends javax.swing.JPanel {
         });
 
         jButton2.setText("Habilidad 1");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Ataque 1");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +120,12 @@ public class PVPFrame extends javax.swing.JPanel {
             }
         });
 
-        jButton11.setText("Defensa");
+        EstadoDefensa1.setText("Defensa");
+        EstadoDefensa1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EstadoDefensa1ActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -131,31 +147,49 @@ public class PVPFrame extends javax.swing.JPanel {
 
         P2.setText("100%");
 
+        P1.setText("100%");
+
+        jLabel1.setText("Vida:");
+
+        jLabel2.setText("Escudo:");
+
+        DefP1.setText("100%");
+
+        jLabel3.setText("Vida:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                        .addComponent(EstadoDefensa1, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                        .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                        .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(DefP1)
+                            .addComponent(P1))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(P2)))
                 .addContainerGap())
         );
@@ -169,25 +203,37 @@ public class PVPFrame extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(P2)
-                        .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(P2)
+                                    .addComponent(jLabel3))
+                                .addGap(43, 43, 43)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(EstadoDefensa1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(P1)
+                                    .addComponent(jLabel1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel2)
+                                    .addComponent(DefP1))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(17, 17, 17))
         );
@@ -195,14 +241,60 @@ public class PVPFrame extends javax.swing.JPanel {
   
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        // ATAQUE MAGO A CABALLERO
+        // HABILIDAD1
+        Menu.Wizard.get(0).Habilidad2();
+        
+        int VidaPorcentual = (Menu.Knight.get(0).getVida()*100)/210;
+        int Defensa = Menu.Knight.get(0).getDefensa();
+        
+        if(Menu.Knight.get(0).getDefensa() > 0){
+            DefP1.setText(String.valueOf(Defensa)+"%");
+        }
+        else if(Menu.Knight.get(0).getDefensa() <= 0){
+            DefP1.setText("0%");
+        }
+           
+        
+        if (Menu.Knight.get(0).getVida() > 0){
+            P1.setText(String.valueOf(VidaPorcentual)+"%");
+        }
+        else if(Menu.Knight.get(0).getVida() <= 0){
+            P1.setText("0%");
+            panelLogs.setText("Mago ha ganado");
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        // ATAQUE MAGO A CABALLERO
+        // ATAQUE 1
+        Menu.Wizard.get(0).Ataque();
+        
+        int VidaPorcentual = (Menu.Knight.get(0).getVida()*100)/210;
+        int Defensa = Menu.Knight.get(0).getDefensa();
+        
+        if(Menu.Knight.get(0).getDefensa() > 0){
+            DefP1.setText(String.valueOf(Defensa)+"%");
+        }
+        else if(Menu.Knight.get(0).getDefensa() <= 0){
+            DefP1.setText("0%");
+        }
+           
+        
+        if (Menu.Knight.get(0).getVida() > 0){
+            P1.setText(String.valueOf(VidaPorcentual)+"%");
+        }
+        else if(Menu.Knight.get(0).getVida() <= 0){
+            P1.setText("0%");
+            panelLogs.setText("Mago ha ganado");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        // ATAQUE CABALLERO A MAGO
+        // ATAQUE 1
         Menu.Knight.get(0).Ataque();
         
         int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
@@ -219,6 +311,8 @@ public class PVPFrame extends javax.swing.JPanel {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        // ATAQUE CABALLERO A MAGO
+        // HABILIDAD2
         Menu.Knight.get(0).Habilidad1();
         
         int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
@@ -234,6 +328,8 @@ public class PVPFrame extends javax.swing.JPanel {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        // ATAQUE CABALLERO A MAGO
+        // HABILIDAD1
         Menu.Knight.get(0).Habilidad1();
         
         int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
@@ -251,21 +347,67 @@ public class PVPFrame extends javax.swing.JPanel {
         // TODO add your handling code here
     }//GEN-LAST:event_jPanel3KeyPressed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        // ATAQUE MAGO A CABALLERO
+        // HABILIDAD1
+        Menu.Wizard.get(0).Habilidad1();
+        
+        int VidaPorcentual = (Menu.Knight.get(0).getVida()*100)/210;
+        int Defensa = Menu.Knight.get(0).getDefensa();
+        
+        if(Menu.Knight.get(0).getDefensa() > 0){
+            DefP1.setText(String.valueOf(Defensa)+"%");
+        }
+        else if(Menu.Knight.get(0).getDefensa() <= 0){
+            DefP1.setText("0%");
+        }
+           
+        
+        if (Menu.Knight.get(0).getVida() > 0){
+            P1.setText(String.valueOf(VidaPorcentual)+"%");
+        }
+        else if(Menu.Knight.get(0).getVida() <= 0){
+            P1.setText("0%");
+            panelLogs.setText("Mago ha ganado");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void EstadoDefensa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadoDefensa1ActionPerformed
+        // TODO add your handling code here:
+        // DEFENSA CABALLERO
+        Caballero Knight = Ventanas.Menu.Knight.get(0);
+        if(Menu.Knight.get(0).getEstadoDefensa() == false){
+            Knight.setEstadoDefensa(true);
+            EstadoDefensa1.setText("Activada");
+        }
+        else{
+            Knight.setEstadoDefensa(false);
+            EstadoDefensa1.setText("Desactivada");
+        }
+        
+    }//GEN-LAST:event_EstadoDefensa1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DefP1;
+    private javax.swing.JButton EstadoDefensa1;
+    private javax.swing.JLabel P1;
     private javax.swing.JLabel P2;
     private javax.swing.JLabel char1;
     private javax.swing.JLabel char2;
     private javax.swing.JLabel char3;
     private javax.swing.JLabel char4;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane panelLogs;

@@ -390,6 +390,10 @@ public class PVPFrame extends javax.swing.JPanel{
         else if(Menu.Wizard.get(0).getVida() <= 0){
             P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
+            P2_A.setEnabled(false);
+            P2_H1.setEnabled(false);
+            P2_H2.setEnabled(false);
+            P2_H3.setEnabled(false);
         }
         Caballero Knight = Ventanas.Menu.Knight.get(0);
         Knight.setEstadoDefensa(false);
@@ -414,6 +418,10 @@ public class PVPFrame extends javax.swing.JPanel{
         else if(Menu.Wizard.get(0).getVida() <= 0){
             P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
+            P2_A.setEnabled(false);
+            P2_H1.setEnabled(false);
+            P2_H2.setEnabled(false);
+            P2_H3.setEnabled(false);
         }
         Caballero Knight = Ventanas.Menu.Knight.get(0);
         Knight.setEstadoDefensa(false);
@@ -448,6 +456,10 @@ public class PVPFrame extends javax.swing.JPanel{
         else if(Menu.Wizard.get(0).getVida() <= 0){
             P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
+            P2_A.setEnabled(false);
+            P2_H1.setEnabled(false);
+            P2_H2.setEnabled(false);
+            P2_H3.setEnabled(false);
         }
         Caballero Knight = Ventanas.Menu.Knight.get(0);
         Knight.setEstadoDefensa(false);

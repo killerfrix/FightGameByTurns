@@ -45,7 +45,7 @@ public class Mago extends Personaje {
 
     @Override
     public void Habilidad1(){
-        double multiplicador = 1.4;
+        double multiplicador = 1.6;
         
         Caballero Knight = Ventanas.Menu.Knight.get(0);
         
@@ -73,7 +73,7 @@ public class Mago extends Personaje {
     
     @Override
     public void Habilidad2(){
-        double multiplicador = 2;
+        double multiplicador = 2.2;
         
         Caballero Knight = Ventanas.Menu.Knight.get(0);
         

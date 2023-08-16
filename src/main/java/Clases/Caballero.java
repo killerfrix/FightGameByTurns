@@ -48,4 +48,9 @@ public class Caballero extends Personaje {
         Mago Wizard = Ventanas.Menu.Wizard.get(0);
         Wizard.setVida((int) Resultado);
     }
+    
+    public int cooldown(){
+        int cooldown = 2;
+        return cooldown;
+    }
 }

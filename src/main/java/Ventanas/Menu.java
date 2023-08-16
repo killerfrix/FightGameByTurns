@@ -32,10 +32,11 @@ public class Menu extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(67, 39, 67));
         setMaximumSize(null);
         setMinimumSize(null);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(118, 80, 118));
         jPanel1.setMaximumSize(new java.awt.Dimension(644, 300));
         jPanel1.setMinimumSize(new java.awt.Dimension(644, 300));
 

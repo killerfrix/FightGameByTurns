@@ -21,12 +21,17 @@ import java.util.logging.Logger;
  * @author Familiar
  */
 public class PVPFrame extends javax.swing.JPanel{
-    
+    int cooldown = 0;
     /**
      * Creates new form PVPFrame
      */
     public PVPFrame() {
-        initComponents();       
+        initComponents(); 
+        
+        if (cooldown > 0){
+            P1_H3.setEnabled(false);
+            System.out.println(cooldown);
+        }
     }
      
     public static ImageIcon invertImageHorizontally(ImageIcon originalIcon) {
@@ -55,74 +60,81 @@ public class PVPFrame extends javax.swing.JPanel{
 
         jScrollPane1 = new javax.swing.JScrollPane();
         panelLogs = new javax.swing.JTextPane();
-        jButton6 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        EstadoDefensa1 = new javax.swing.JButton();
+        P2_H2 = new javax.swing.JButton();
+        P2_H1 = new javax.swing.JButton();
+        P2_A = new javax.swing.JButton();
+        P1_A = new javax.swing.JButton();
+        P1_H1 = new javax.swing.JButton();
+        P1_H2 = new javax.swing.JButton();
+        P1_H3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         char1 = new javax.swing.JLabel();
         char4 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         P2 = new javax.swing.JLabel();
         P1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         DefP1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        P2_H3 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(118, 80, 118));
+        setForeground(new java.awt.Color(67, 39, 67));
         setMaximumSize(null);
 
-        panelLogs.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        panelLogs.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(panelLogs);
 
-        jButton6.setText("Habilidad 2");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        P2_H2.setText("Espiritu del bosque");
+        P2_H2.setEnabled(false);
+        P2_H2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                P2_H2ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Habilidad 1");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        P2_H1.setText("Roba esencia");
+        P2_H1.setEnabled(false);
+        P2_H1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                P2_H1ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Ataque 1");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        P2_A.setText("Expeliarmus");
+        P2_A.setEnabled(false);
+        P2_A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                P2_AActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Ataque 1");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        P1_A.setText("Espadazo");
+        P1_A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                P1_AActionPerformed(evt);
             }
         });
 
-        jButton9.setText("Habilidad 1");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        P1_H1.setText("Golpe de alabarda");
+        P1_H1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                P1_H1ActionPerformed(evt);
             }
         });
 
-        jButton10.setText("Habilidad 2");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        P1_H2.setText("Espada giratoria");
+        P1_H2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                P1_H2ActionPerformed(evt);
             }
         });
 
-        EstadoDefensa1.setText("Defensa");
-        EstadoDefensa1.addActionListener(new java.awt.event.ActionListener() {
+        P1_H3.setText("Defensa");
+        P1_H3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EstadoDefensa1ActionPerformed(evt);
+                P1_H3ActionPerformed(evt);
             }
         });
 
@@ -141,21 +153,39 @@ public class PVPFrame extends javax.swing.JPanel{
         ImageIcon invertedIcon = invertImageHorizontally(image);
         char1.setIcon(invertedIcon);
         jPanel3.add(char4);
-        char4.setBounds(280, 0, 119, 195);
+        char4.setBounds(250, 0, 119, 195);
         ImageIcon image2 = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Wizard.png");
         char4.setIcon(image2);
+        jPanel3.add(jLabel4);
+        jLabel4.setBounds(0, 0, 370, 200);
+        ImageIcon image3 = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/castle.png");
+        jLabel4.setIcon(image3);
 
+        P2.setForeground(new java.awt.Color(255, 255, 255));
         P2.setText("100%");
 
+        P1.setForeground(new java.awt.Color(255, 255, 255));
         P1.setText("100%");
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Vida:");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Escudo:");
 
+        DefP1.setForeground(new java.awt.Color(255, 255, 255));
         DefP1.setText("100%");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Vida:");
+
+        P2_H3.setText("Carga Aurea");
+        P2_H3.setEnabled(false);
+        P2_H3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                P2_H3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -165,10 +195,10 @@ public class PVPFrame extends javax.swing.JPanel{
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                        .addComponent(EstadoDefensa1, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                        .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                        .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
+                        .addComponent(P1_H2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(P1_H3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(P1_H1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(P1_A, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -180,16 +210,17 @@ public class PVPFrame extends javax.swing.JPanel{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                    .addComponent(P2_A, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(P2_H1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(P2_H2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(P2)))
+                        .addComponent(P2))
+                    .addComponent(P2_H3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -197,6 +228,9 @@ public class PVPFrame extends javax.swing.JPanel{
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(P2_H3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -207,22 +241,22 @@ public class PVPFrame extends javax.swing.JPanel{
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(P2)
                                     .addComponent(jLabel3))
-                                .addGap(43, 43, 43)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(P2_A, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(P2_H1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(P2_H2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(P1_A, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(P1_H1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(P1_H2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(EstadoDefensa1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(P1_H3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(P1)
@@ -236,12 +270,12 @@ public class PVPFrame extends javax.swing.JPanel{
         );
     }// </editor-fold>//GEN-END:initComponents
   
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void P2_H2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P2_H2ActionPerformed
         // TODO add your handling code here:
         // ATAQUE MAGO A CABALLERO
         // HABILIDAD1
         Menu.Wizard.get(0).Habilidad2();
-        
+        panelLogs.setText("Mago uso habilidad 2");
         int VidaPorcentual = (Menu.Knight.get(0).getVida()*100)/210;
         int Defensa = Menu.Knight.get(0).getDefensa();
         
@@ -260,14 +294,34 @@ public class PVPFrame extends javax.swing.JPanel{
             P1.setText("0%");
             panelLogs.setText("Mago ha ganado");
         }
-    }//GEN-LAST:event_jButton6ActionPerformed
+        
+        //habilitar botones enemigos
+        P2_A.setEnabled(false);
+        P2_H1.setEnabled(false);
+        P2_H2.setEnabled(false);
+        P2_H3.setEnabled(false);
+        //desabilitar habilidades propias
+        P1_A.setEnabled(true);
+        P1_H1.setEnabled(true);
+        P1_H2.setEnabled(true);
+        if (cooldown > 0){
+            P1_H3.setEnabled(false);
+            cooldown = cooldown-1;
+            System.out.println(cooldown);
+        }
+        else {
+           P1_H3.setEnabled(true); 
+        }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+    }//GEN-LAST:event_P2_H2ActionPerformed
+
+    private void P2_AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P2_AActionPerformed
         // TODO add your handling code here:
         // ATAQUE MAGO A CABALLERO
         // ATAQUE 1
         Menu.Wizard.get(0).Ataque();
-        
+        panelLogs.setText("El Mago a atacado!");
         int VidaPorcentual = (Menu.Knight.get(0).getVida()*100)/210;
         int Defensa = Menu.Knight.get(0).getDefensa();
         
@@ -286,15 +340,47 @@ public class PVPFrame extends javax.swing.JPanel{
             P1.setText("0%");
             panelLogs.setText("Mago ha ganado");
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+
+        //habilitar botones enemigos
+        P2_A.setEnabled(false);
+        P2_H1.setEnabled(false);
+        P2_H2.setEnabled(false);
+        P2_H3.setEnabled(false);
+        //desabilitar habilidades propias
+        P1_A.setEnabled(true);
+        P1_H1.setEnabled(true);
+        P1_H2.setEnabled(true);
+        if (cooldown > 0){
+            P1_H3.setEnabled(false);
+            cooldown = cooldown-1;
+            System.out.println(cooldown);
+        }
+        else {
+           P1_H3.setEnabled(true); 
+        }
+    }//GEN-LAST:event_P2_AActionPerformed
     
     
     
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void P1_AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P1_AActionPerformed
         // TODO add your handling code here:
         // ATAQUE CABALLERO A MAGO
         // ATAQUE 1
+        
+        //habilitar botones enemigos
+        P2_A.setEnabled(true);
+        P2_H1.setEnabled(true);
+        P2_H2.setEnabled(true);
+        P2_H3.setEnabled(true);
+        //desabilitar habilidades propias
+        P1_A.setEnabled(false);
+        P1_H1.setEnabled(false);
+        P1_H2.setEnabled(false);
+        P1_H3.setEnabled(false);
+        
+        
         Menu.Knight.get(0).Ataque();
+        panelLogs.setText("El caballero a atacado!");
         
         int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
         
@@ -305,19 +391,21 @@ public class PVPFrame extends javax.swing.JPanel{
             P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
         }
+        Caballero Knight = Ventanas.Menu.Knight.get(0);
+        Knight.setEstadoDefensa(false);
         
         ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
             ImageIcon invertedIcon = invertImageHorizontally(image);
             char1.setIcon(invertedIcon);
         
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_P1_AActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void P1_H2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P1_H2ActionPerformed
         // TODO add your handling code here:
         // ATAQUE CABALLERO A MAGO
         // HABILIDAD2
         Menu.Knight.get(0).Habilidad1();
-        
+        panelLogs.setText("Caballero uso habilidad 2");
         int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
         
         if (Menu.Wizard.get(0).getVida() > 0){
@@ -327,17 +415,31 @@ public class PVPFrame extends javax.swing.JPanel{
             P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
         }
+        Caballero Knight = Ventanas.Menu.Knight.get(0);
+        Knight.setEstadoDefensa(false);
+        
         ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
             ImageIcon invertedIcon = invertImageHorizontally(image);
             char1.setIcon(invertedIcon);
-    }//GEN-LAST:event_jButton10ActionPerformed
+            
+            //habilitar botones enemigos
+        P2_A.setEnabled(true);
+        P2_H1.setEnabled(true);
+        P2_H2.setEnabled(true);
+        P2_H3.setEnabled(true);
+        //desabilitar habilidades propias
+        P1_A.setEnabled(false);
+        P1_H1.setEnabled(false);
+        P1_H2.setEnabled(false);
+        P1_H3.setEnabled(false);
+    }//GEN-LAST:event_P1_H2ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void P1_H1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P1_H1ActionPerformed
         // TODO add your handling code here:
         // ATAQUE CABALLERO A MAGO
         // HABILIDAD1
         Menu.Knight.get(0).Habilidad1();
-        
+        panelLogs.setText("Caballero uso habilidad 1");
         int VidaPorcentual = (Menu.Wizard.get(0).getVida()*100)/200;
         
         if (Menu.Wizard.get(0).getVida() > 0){
@@ -347,22 +449,36 @@ public class PVPFrame extends javax.swing.JPanel{
             P2.setText("0%");
             panelLogs.setText("Caballero ha ganado");
         }
+        Caballero Knight = Ventanas.Menu.Knight.get(0);
+        Knight.setEstadoDefensa(false);
+        
         
         ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
             ImageIcon invertedIcon = invertImageHorizontally(image);
             char1.setIcon(invertedIcon);
-    }//GEN-LAST:event_jButton9ActionPerformed
+            
+            //habilitar botones enemigos
+        P2_A.setEnabled(true);
+        P2_H1.setEnabled(true);
+        P2_H2.setEnabled(true);
+        P2_H3.setEnabled(true);
+        //desabilitar habilidades propias
+        P1_A.setEnabled(false);
+        P1_H1.setEnabled(false);
+        P1_H2.setEnabled(false);
+        P1_H3.setEnabled(false);
+    }//GEN-LAST:event_P1_H1ActionPerformed
 
     private void jPanel3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanel3KeyPressed
         // TODO add your handling code here
     }//GEN-LAST:event_jPanel3KeyPressed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void P2_H1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P2_H1ActionPerformed
         // TODO add your handling code here:
         // ATAQUE MAGO A CABALLERO
         // HABILIDAD1
         Menu.Wizard.get(0).Habilidad1();
-        
+        panelLogs.setText("Mago uso habilidad 1!");
         int VidaPorcentual = (Menu.Knight.get(0).getVida()*100)/210;
         int Defensa = Menu.Knight.get(0).getDefensa();
         
@@ -381,43 +497,101 @@ public class PVPFrame extends javax.swing.JPanel{
             P1.setText("0%");
             panelLogs.setText("Mago ha ganado");
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+        
+        //habilitar botones enemigos
+        P2_A.setEnabled(false);
+        P2_H1.setEnabled(false);
+        P2_H2.setEnabled(false);
+        P2_H3.setEnabled(false);
+        //desabilitar habilidades propias
+        P1_A.setEnabled(true);
+        P1_H1.setEnabled(true);
+        P1_H2.setEnabled(true);
+        if (cooldown > 0){
+            P1_H3.setEnabled(false);
+            cooldown = cooldown-1;
+            System.out.println(cooldown);
+        }
+        else {
+           P1_H3.setEnabled(true); 
+        }
+    }//GEN-LAST:event_P2_H1ActionPerformed
 
-    private void EstadoDefensa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadoDefensa1ActionPerformed
+    private void P1_H3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P1_H3ActionPerformed
         // TODO add your handling code here:
         // DEFENSA CABALLERO
+        panelLogs.setText("Caballero se a defendido");
+
         Caballero Knight = Ventanas.Menu.Knight.get(0);
         if(Menu.Knight.get(0).getEstadoDefensa() == false){
+            ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/KnightB.png");
+            ImageIcon invertedIcon = invertImageHorizontally(image);
+            char1.setIcon(invertedIcon);
             Knight.setEstadoDefensa(true);
-            EstadoDefensa1.setText("Activada");
+            P1_H3.setText("Activada");
         }
         else{
             Knight.setEstadoDefensa(false);
-            EstadoDefensa1.setText("Desactivada");
+            ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
+            ImageIcon invertedIcon = invertImageHorizontally(image);
+            char1.setIcon(invertedIcon);
+            P1_H3.setText("Desactivada");
         }
-        ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/KnightB.png");
-        ImageIcon invertedIcon = invertImageHorizontally(image);
-        char1.setIcon(invertedIcon);
+
+        //habilitar botones enemigos
+        P2_A.setEnabled(true);
+        P2_H1.setEnabled(true);
+        P2_H2.setEnabled(true);
+        P2_H3.setEnabled(true);
+        //desabilitar habilidades propias
+        P1_A.setEnabled(false);
+        P1_H1.setEnabled(false);
+        P1_H2.setEnabled(false);
+        P1_H3.setEnabled(false);
         
-    }//GEN-LAST:event_EstadoDefensa1ActionPerformed
+    }//GEN-LAST:event_P1_H3ActionPerformed
+
+    private void P2_H3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P2_H3ActionPerformed
+        // TODO add your handling code here:
+        Caballero Knight = Ventanas.Menu.Knight.get(0);
+        Knight.setEstadoDefensa(false);
+        ImageIcon image = new ImageIcon("C:/Users/De-Ell/Documents/NetBeansProjects/ProyectoFInal/src/main/java/Images/Knight.png");
+            ImageIcon invertedIcon = invertImageHorizontally(image);
+            char1.setIcon(invertedIcon);
+            P1_H3.setText("Desactivada");
+        panelLogs.setText("Carga aurea desactivo el escudo de caballero por 2 turnos");
+        cooldown = 1;
+        
+        //habilitar botones enemigos
+        P2_A.setEnabled(false);
+        P2_H1.setEnabled(false);
+        P2_H2.setEnabled(false);
+        P2_H3.setEnabled(false);
+        //desabilitar habilidades propias
+        P1_A.setEnabled(true);
+        P1_H1.setEnabled(true);
+        P1_H2.setEnabled(true);
+    }//GEN-LAST:event_P2_H3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DefP1;
-    private javax.swing.JButton EstadoDefensa1;
     private javax.swing.JLabel P1;
+    private javax.swing.JButton P1_A;
+    private javax.swing.JButton P1_H1;
+    private javax.swing.JButton P1_H2;
+    private javax.swing.JButton P1_H3;
     private javax.swing.JLabel P2;
+    private javax.swing.JButton P2_A;
+    private javax.swing.JButton P2_H1;
+    private javax.swing.JButton P2_H2;
+    private javax.swing.JButton P2_H3;
     private javax.swing.JLabel char1;
     private javax.swing.JLabel char4;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane panelLogs;
